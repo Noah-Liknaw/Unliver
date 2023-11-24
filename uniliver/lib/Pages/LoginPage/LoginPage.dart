@@ -14,8 +14,17 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Log in"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text("Log in"),
+                ),
+              ],
+            ),
             FractionallySizedBox(
               widthFactor: 0.9,
               child: Container(
@@ -60,11 +69,37 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Row(
                       children: [
-                        Image.asset("images/line_1.png"),
+                        Image.asset("assets/images/line_1.png"),
                         Text("OR"),
-                        Image.asset("images/line_1.png"),
+                        Image.asset("assets/images/line_1.png"),
                       ],
-                    )
+                    ),
+                    Container(
+                      width: 321,
+                      height: 64,
+                      color: Colors.white,
+                      child: Center(
+                          child: Row(
+                        children: [
+                          Image.asset("assets/images/google_logo.png"),
+                          Text("Continue with Google"),
+                        ],
+                      )),
+                    ),
+                    Container(
+                      width: 321,
+                      height: 64,
+                      color: Colors.white,
+                      child: Center(
+                          child: Row(
+                        children: [
+                          Image.asset("assets/images/facebook_logo.png"),
+                          Text("Continue with Facebook"),
+                        ],
+                      )),
+                    ),
+                    Text("Forgor your password?"),
+                    Text("Dont't have an account? Sign Up"),
                   ],
                 ),
               ),
